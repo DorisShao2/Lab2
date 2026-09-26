@@ -1,1 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #edf0f4;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* 2. Header: mobile layout */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dce3eb;
+    padding: 25px;
+}
+
+.logo {
+    color: #2c3e50;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* 3. Main content */
+main {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    gap: 30px;
+}
+
+/* 4. Bio / Hero section */
+.bio-hero {
+    flex-basis: 100%;
+    width: 100%;
+    background-color: #dce3eb;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.eyebrow {
+    color: #465d73;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #465d73;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #2c3e50;
+}
+
+/* 5. Cards: mobile layout */
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card {
+    flex-basis: 100%;
+    min-width: 0;
+    background-color: white;
+    padding: 24px;
+    border: 1px solid #ccd5df;
+    border-radius: 8px;
+    overflow-wrap: break-word;
+    transition: box-shadow 0.2s;
+}
+
+.card-number {
+    color: #465d73;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card-tag {
+    color: #465d73;
+    font-size: 13px;
+    border-top: 1px solid #ccd5df;
+    margin-top: 20px;
+    padding-top: 15px;
+}
+
+/* 6. Card hover interaction */
+.card:hover {
+    box-shadow: 0 6px 18px rgba(44, 62, 80, 0.18);
+}
+
+/* 7. Footer */
+footer {
+    background-color: #dce3eb;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer h2 {
+    margin-bottom: 12px;
+}
+
+footer p {
+    margin-bottom: 12px;
+}
+
+footer a {
+    color: #2c3e50;
+    overflow-wrap: anywhere;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* 8. Desktop layout */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    nav {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .card-grid {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .card {
+        flex-basis: 30%;
+    }
+}
